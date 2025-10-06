@@ -39,10 +39,10 @@ function canGenPoints(){
 function getPointGen() {
 	if(!canGenPoints()) return new ExpantaNum(0)
 	let gain = new ExpantaNum(0.5)
-gain=gain.mul(upgradeEffect("u",11))
-gain=gain.mul(upgradeEffect("u",12))
-gain=gain.mul(upgradeEffect("u",13))
-gain=gain.mul(upgradeEffect("u",14))
+if(hasUpgrade("u",11))gain=gain.mul(upgradeEffect("u",11))
+if(hasUpgrade("u",12))gain=gain.mul(upgradeEffect("u",12))
+if(hasUpgrade("u",13))gain=gain.mul(upgradeEffect("u",13))
+if(hasUpgrade("u",14))gain=gain.mul(upgradeEffect("u",14))
 	return gain
 }
 
